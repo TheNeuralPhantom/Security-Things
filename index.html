@@ -15,10 +15,7 @@
         /* Body with image background + fallback animated neon */
         body {
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            background-image: url('bg-image.jpg');
+            background-image: url('bg-image.jpg'); /* Replace with your uploaded image */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -26,6 +23,10 @@
             color: #e0e0e0;
             position: relative;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         /* Fallback animated neon background if image fails */
@@ -59,25 +60,14 @@
             z-index: -1;
         }
 
-        /* Glassmorphism card with enhanced visibility and scroll support */
-        .card {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(15px);
-            border-radius: 15px;
-            padding: 2.5rem;
+        /* Content container for centering and max-width */
+        .content {
             max-width: 700px;
             width: 90%;
-            text-align: center;
-            box-shadow: 0 0 30px rgba(0, 255, 127, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 127, 0.3);
             animation: fadeIn 1s ease-out;
-            position: relative;
-            z-index: 1;
-            max-height: 80vh;
-            overflow-y: auto;
         }
 
-        /* Fade-in animation for card */
+        /* Fade-in animation for content */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -118,7 +108,7 @@
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
-            margin-bottom: 1.5rem;
+            margin: 1rem 0;
             transition: all 0.3s ease;
         }
 
@@ -153,11 +143,7 @@
 
         /* Transcript section styling */
         .transcript {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 5px;
-            border: 1px solid rgba(0, 255, 127, 0.2);
-            margin-top: 2rem;
+            margin: 2rem 0;
             text-align: left;
         }
 
@@ -177,14 +163,14 @@
             h1 { font-size: 2rem; }
             h2 { font-size: 1.6rem; }
             p { font-size: 1rem; }
-            .card { padding: 1.5rem; max-height: 70vh; }
+            .content { padding: 1rem; }
             #project-list li { padding: 0.6rem; }
             .connect-link { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
-    <div class="card">
+    <div class="content">
         <p><a href="https://linktr.ee/the_neural_phantom" target="_blank" class="connect-link">Connect with me</a></p>
         <h1>Hack with reason, hack for good!</h1>
         <p>Below are a few of the code projects and things I've made or done, enjoy and behave.</p>
